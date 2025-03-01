@@ -20,10 +20,10 @@ player_size = (20, 20)
 player = pygame.Surface(player_size)
 player.fill(COLOR_WHITE)
 player_rect = player.get_rect()
-player_move_down = [0, 1]
-player_move_right = [1, 0]
-player_move_up = [0, -1]
-player_move_left = [-1, 0]
+player_move_down = [0, 5]
+player_move_right = [5, 0]
+player_move_up = [0, -5]
+player_move_left = [-5, 0]
 
 def create_enemy():
     enemy_size = (20, 20)
@@ -87,8 +87,6 @@ while playing:
         main_display.blit(bonus[0], bonus[1])
 
       main_display.blit(player, player_rect)
-
-      print(len(enemies))
 
       pygame.display.flip()
 
